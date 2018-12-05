@@ -1,0 +1,31 @@
+.skills-list
+	+flex-flow(row wrap)
+	&-element
+		+flex-flow(row wrap)
+		width: 100%
+		margin-right: 0
+		margin-top: 50px
+		@media screen and (min-width: 740px)
+				width: 45%
+				margin-right: 5%
+		&-img
+			margin-bottom: 25px
+			width: 100%
+			+flex-short(center, flex-start)
+			@media screen and (min-width: 350px)
+				width: calc(100% - (100% - 20px - 72px))
+		&-container
+			width: 100%
+			@media screen and (min-width: 350px)
+				width: calc(100% - 20px - 72px)
+			&-title
+				margin-bottom: 10px
+				color: #222222				
+				font-size: $main-font-size + 6px
+				font-weight: 500
+		@each $img-number in (1,2,3,4,5,6)
+			&-image-#{$img-number}
+				height: 72px			
+				width: 72px
+				background: url('../img/skills-page/#{$img-number}.png') no-repeat
+				background-size: 100% 100%

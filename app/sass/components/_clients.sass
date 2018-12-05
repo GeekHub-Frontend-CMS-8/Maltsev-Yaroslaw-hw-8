@@ -1,0 +1,47 @@
+.clients
+	background-color: #fafafa
+	&-img
+		width: 220px
+		height: 220px
+		background: url('../img/clients-page/Container.png') no-repeat
+		background-size: cover
+		&-12
+			visibility: hidden
+			position: absolute
+			@media screen and (min-width: 910px)
+				position: static
+				visibility: visible
+		&-2
+			visibility: visible
+			position: static
+			@media screen and (min-width: 910px)
+				position: absolute
+				visibility: hidden
+	&-container
+		padding: 55px 50px
+		text-align: left
+		&-1
+			margin-left: 25px
+			background: url('../img/clients-page/Speak_Box-top.png') no-repeat
+			background-size: 100% 100%
+			@media screen and (min-width: 910px)
+				background: url('../img/clients-page/Speak_Box-left.png') no-repeat
+				background-size: 100% 100%
+		&-2
+			margin-right: 25px
+			background: url('../img/clients-page/Speak_Box-top.png') no-repeat
+			background-size: 100% 100%
+			@media screen and (min-width: 910px)
+				background: url('../img/clients-page/Speak_Box-right.png') no-repeat
+				background-size: 100% 100%
+blockquote
+	margin-bottom: 15px	
+	font-size: $main-font-size
+	@media screen and (min-width: 350px)
+		font-size: $main-font-size + 4px
+	
+.quote-name
+	color: #7690c5
+	font-size: $main-font-size - 2px
+	@media screen and (min-width: 350px)
+		font-size: $main-font-size + 2px

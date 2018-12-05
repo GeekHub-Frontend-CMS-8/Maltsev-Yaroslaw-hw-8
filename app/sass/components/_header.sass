@@ -1,0 +1,37 @@
+.header
+	+flex-flow(row nowrap)
+	align-items: center
+	margin-bottom: 140px
+	&-logo
+		width: 20%
+		+flex-align(center)
+		&-name
+			color: $light-color
+			font-size: $main-font-size + 3px
+			font-weight: $bold-weight
+			text-transform: uppercase
+			@media screen and (min-width: 350px)
+				font-size: $main-font-size + 9px
+	&-menu
+		+flex-justify(flex-end)
+		align-items: center
+		width: 80%
+		&-row
+			+flex-flow(row wrap)
+			visibility: hidden
+			position: absolute
+			@media screen and (min-width: 740px)
+				visibility: visible
+				position: static
+			&-element
+				padding: 10px 15px
+				background: transparent
+				&:hover
+					transition: 0.5s
+					background: $light-color
+				&:hover &-name
+					transition: 0.5s
+					color: $secondary-color
+				&-name
+					color: $light-color
+					font-size: $main-font-size + 2px

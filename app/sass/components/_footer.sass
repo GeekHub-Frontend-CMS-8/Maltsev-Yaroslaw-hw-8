@@ -1,0 +1,68 @@
+footer
+	background-color: #7690c5
+.say-hello
+	+flex-flow(row wrap)
+	&-text
+		width: 100%
+		@media screen and (min-width: 740px)
+				width: 50%
+		&-title
+			text-align: left
+			color: $light-color
+			font-size: 60px
+			font-family: "Brandon Grotesque Light"
+			&-allotment
+				color: $light-color
+				font-family: "Brandon Grotesque Bold"
+				font-weight: $bold-weight
+			&-desc
+				color: $light-color
+				
+				
+		&-list
+			+flex-flow(row wrap)
+			&-element				
+				+flex-flow(row wrap)
+				width: 100%
+				margin: 0
+				margin-top: 20px
+				@media screen and (min-width: 740px)
+						width: 50%
+				&-img					
+					width: 30px
+					+flex-short(center, flex-start)
+				&-container
+					width: calc(100% - 30px)
+					+flex-short(flex-start, center)
+					@media screen and (min-width: 350px)
+						width: calc(100% - 20px - 72px)
+					&-text
+						color: $light-color						
+						
+						
+				&-image					
+					&-1
+						height: 30px		
+						width: 20px
+						background: url('../img/Mail-Icon.png') no-repeat
+						background-size: 100% 100%
+	&-form
+		width: 100%
+		@media screen and (min-width: 740px)
+				width: 50%
+		&-input
+			margin-top: 20px
+			padding: 15px
+			width: 90%
+		&-textarea
+			margin-top: 20px
+			padding: 15px
+			width: 90%
+			min-height: 200px
+.copyright
+	margin-top: 100px
+	padding: 20px
+	border-top: 0.1px solid $light-color
+	@extend %flex-center
+	span
+		color: $light-color

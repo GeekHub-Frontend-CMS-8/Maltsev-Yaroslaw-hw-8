@@ -1,0 +1,38 @@
+.adaptive-content
+	padding-top: 80px
+	+flex-all(center, center, row wrap)
+	&-container
+		width: 100%
+		@media screen and (min-width: 740px)
+			width: 60%
+
+
+.branding
+	background-color: #fafafa
+	&-title
+		text-align: left
+	&-container
+		@media screen and (min-width: 740px)
+			width: calc(60% - 70px)
+			margin-left: 70px
+	&-img
+		width: 275px
+		height: 200px
+		display: flex 
+		order: 2
+		@media screen and (min-width: 740px) 
+			order: 0
+		background-size: cover
+		background: url('../img/main-page/Users-Icon.png') no-repeat
+.web-development
+	&-title
+		text-align: left
+	&-container
+		@media screen and (min-width: 740px)
+			width: calc(60% - 70px)
+			margin-right: 70px
+	&-img
+		width: 250px
+		height: 220px
+		background-size: cover
+		background: url('../img/main-page/flow-tree-icon.png') no-repeat

@@ -1,0 +1,88 @@
+.main-page
+	text-align: center
+	background: url('../img/background/background-main.png') no-repeat
+	background-size: cover
+	&-section
+		padding-bottom: 80px
+		&-question
+			color: $light-color
+			font-size: $main-font-size - 2px
+			@media screen and (min-width: 350px)
+				font-size: $main-font-size + 4px
+			
+h1
+	margin-top: 30px
+	margin-bottom: 55px
+	color: $light-color
+	font-size: $main-font-size*2
+	font-weight: $bold-weight
+	text-transform: uppercase
+	@media screen and (min-width: 350px)
+		font-size: $main-font-size*3.5
+
+.menu-btn
+	display: block
+	width: 30px
+	height: 30px
+	background-color: transparent
+	position: relative
+	visibility: visible
+	@media screen and (min-width: 740px)
+		visibility: hidden
+		position: absolute
+	span
+		position: absolute
+		margin-top: -1px
+		margin-left: -10px
+		top: 50%
+		left: 50%
+		width: 20px
+		height: 2px
+		background-color: $light-color
+		visibility: visible
+		@media screen and (min-width: 740px)
+			visibility: hidden
+			position: absolute
+	span::before
+		position: absolute
+		margin-top: -1px
+		margin-left: -10px
+		top: 50%
+		left: 50%
+		width: 20px
+		height: 2px
+		background-color: $light-color
+		content: ''
+		display: block
+		transition: 0.2s
+		transform: translateY(-5px)
+		visibility: visible
+		@media screen and (min-width: 740px)
+			visibility: hidden
+			position: absolute
+	span::after
+		position: absolute
+		margin-top: -1px
+		margin-left: -10px
+		top: 50%
+		left: 50%
+		width: 20px
+		height: 2px
+		background-color: $light-color
+		content: ''
+		display: block
+		transition: 0.2s
+		transform: translateY(5px)
+		visibility: visible
+		@media screen and (min-width: 740px)
+			visibility: hidden
+			position: absolute	
+
+.menu-btn:hover span:before
+	transform: rotate(-35deg)
+	width: 10px
+	transform-origin: left bottom
+.menu-btn:hover span:after
+	transform: rotate(35deg)
+	width: 10px
+	transform-origin: left top
