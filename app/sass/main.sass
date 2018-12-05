@@ -1,0 +1,462 @@
+@import 'utils/_font-and-colors.sass'
+@import 'utils/_global.sass'
+@import 'utils/_mixins.sass'
+@import 'utils/_variabels.sass'
+
+a
+	text-decoration: none
+button
+	background: transparent
+	border: solid #fff
+	padding: 10px 40px
+.button-text
+	color: #fff
+	font-family: "Brandon Grotesque"
+	font-size: 23px
+.title
+	text-align: center
+	margin-bottom: 35px
+	color: #222222
+	font-family: "Brandon Grotesque"
+	font-size: 45px
+	font-family: "Brandon Grotesque Light"
+	font-weight: 300
+	&-allotment
+		font-family: "Brandon Grotesque Bold"
+		font-weight: 700
+		&-white
+			color: #fff
+			font-family: "Brandon Grotesque Bold";
+			font-weight: 700;
+	&-desc
+		text-align: center
+		color: #777777;
+		font-family: "Brandon Grotesque";
+		font-size: 18px;
+		font-weight: 400;
+	&-white
+		color: #fff
+		font-family: "Brandon Grotesque Light";
+		font-weight: 300;
+
+
+
+.header
+	+flex-flow(row nowrap)
+	align-items: center
+	margin-bottom: 140px
+	&-logo
+		width: 20%
+		+flex-align(center)
+		&-name
+			color: #fff
+			font-size: 25px;
+			font-weight: 700
+			text-transform: uppercase;
+	&-menu
+		+flex-justify(flex-end)
+		align-items: center
+		width: 80%
+		&-row
+			+flex-flow(row wrap)			
+			visibility: hidden
+			position: absolute
+			@media screen and (min-width: 740px)
+				visibility: visible
+				position: static
+			&-element
+				padding: 5px
+				&-name
+					color: #fff;
+					font-family: "Brandon Grotesque";
+					font-size: 18px;
+			
+.main-page
+	text-align: center
+	background: url('../img/background/background-main.png') no-repeat
+	background-size: cover
+	&-section
+		padding-bottom: 80px
+		&-question
+			color: #fff
+			font-family: "Brandon Grotesque"
+			font-size: 20px
+			font-weight: 300
+h1
+	margin-top: 30px
+	margin-bottom: 55px
+	color: #fff
+	font-family: "Brandon Grotesque"
+	font-size: 56px
+	font-weight: 700
+	text-transform: uppercase
+.menu-btn
+	display: block
+	width: 30px
+	height: 30px
+	background-color: yellow
+	position: relative
+	visibility: visible
+	@media screen and (min-width: 740px)
+		visibility: hidden
+		position: absolute
+	span
+		position: absolute
+		margin-top: -1px
+		margin-left: -10px
+		top: 50%
+		left: 50%
+		width: 20px
+		height: 2px
+		background-color: #222
+		visibility: visible
+		@media screen and (min-width: 740px)
+			visibility: hidden
+			position: absolute
+	span::before
+		position: absolute
+		margin-top: -1px
+		margin-left: -10px
+		top: 50%
+		left: 50%
+		width: 20px
+		height: 2px
+		background-color: #222
+		content: ''
+		display: block
+		transition: 0.2s
+		transform: translateY(-5px)
+		visibility: visible
+		@media screen and (min-width: 740px)
+			visibility: hidden
+			position: absolute
+	span::after
+		position: absolute
+		margin-top: -1px
+		margin-left: -10px
+		top: 50%
+		left: 50%
+		width: 20px
+		height: 2px
+		background-color: #222
+		content: ''
+		display: block
+		transition: 0.2s
+		transform: translateY(5px)
+		visibility: visible
+		@media screen and (min-width: 740px)
+			visibility: hidden
+			position: absolute	
+
+.menu-btn:hover span:before
+	transform: rotate(-35deg)
+	width: 10px
+	transform-origin: left bottom
+.menu-btn:hover span:after
+	transform: rotate(35deg)
+	width: 10px
+	transform-origin: left top
+
+
+
+.adaptive-content
+	padding-top: 80px
+	+flex-all(center, center, row wrap)
+	&-container
+		width: 100%
+		@media screen and (min-width: 740px)
+			width: 60%
+
+
+.branding
+	background-color: #fafafa
+	&-title
+		text-align: left
+	&-container
+		@media screen and (min-width: 740px)
+			width: calc(60% - 70px)
+			margin-left: 70px
+	&-img
+		width: 275px
+		height: 200px
+		display: flex 
+		order: 2
+		@media screen and (min-width: 740px) 
+			order: 0
+		background-size: cover
+		background: url('../img/main-page/Users-Icon.png') no-repeat
+.web-development
+	&-title
+		text-align: left
+	&-container
+		@media screen and (min-width: 740px)
+			width: calc(60% - 70px)
+			margin-right: 70px
+	&-img
+		width: 250px
+		height: 220px
+		background-size: cover
+		background: url('../img/main-page/flow-tree-icon.png') no-repeat
+
+
+
+.skills-list
+	+flex-flow(row wrap)
+	&-element
+		+flex-flow(row wrap)
+		width: 100%
+		margin-right: 0
+		margin-top: 50px
+		@media screen and (min-width: 740px)
+				width: 45%
+				margin-right: 5%
+		&-img
+			width: 100%
+			+flex-short(center, flex-start)
+			@media screen and (min-width: 350px)
+				width: calc(100% - (100% - 20px - 72px))
+		&-container
+			width: 100%
+			@media screen and (min-width: 350px)
+				width: calc(100% - 20px - 72px)
+			&-title
+				margin-bottom: 10px
+				color: #222222
+				font-family: "Brandon Grotesque"
+				font-size: 22px
+				font-weight: 500
+		@each $img-number in (1,2,3,4,5,6)
+			&-image-#{$img-number}
+				height: 72px			
+				width: 72px
+				background: url('../img/skills-page/#{$img-number}.png') no-repeat
+				background-size: 100% 100%
+.clients
+	background-color: #fafafa
+	&-img
+		width: 220px
+		height: 220px
+		background: url('../img/clients-page/Container.png') no-repeat
+		background-size: cover
+		&-12
+			visibility: hidden
+			position: absolute
+			@media screen and (min-width: 910px)
+				position: static
+				visibility: visible
+		&-2
+			visibility: visible
+			position: static
+			@media screen and (min-width: 910px)
+				position: absolute
+				visibility: hidden
+	&-container
+		padding: 55px 50px
+		text-align: left
+		&-1
+			margin-left: 25px
+			background: url('../img/clients-page/Speak_Box-top.png') no-repeat
+			background-size: 100% 100%
+			@media screen and (min-width: 910px)
+				background: url('../img/clients-page/Speak_Box-left.png') no-repeat
+				background-size: 100% 100%
+		&-2
+			margin-right: 25px
+			background: url('../img/clients-page/Speak_Box-top.png') no-repeat
+			background-size: 100% 100%
+			@media screen and (min-width: 910px)
+				background: url('../img/clients-page/Speak_Box-right.png') no-repeat
+				background-size: 100% 100%
+blockquote
+	margin-bottom: 15px
+	color: #777777;
+	font-family: "Brandon Grotesque";
+	font-size: 20px;
+	font-weight: 400;
+.quote-name
+	color: #7690c5;
+	font-family: "Brandon Grotesque";
+	font-size: 18px;
+	font-weight: 400;
+
+.logos-list
+	+flex-all(center, center, row wrap)
+	&-elements
+		+flex-short(center, center)
+		width: 100%
+		margin: 20px 10px 20px 0px
+		@media screen and (min-width: 500px)
+			width: 45%
+			margin: 20px 10px 20px 0px
+		@media screen and (min-width: 890px)
+			width: 20%
+			margin-right: 5%
+		&-last
+			margin-right: 0
+		&-img
+			height: 40px
+			@media screen and (min-width: 890px)
+				width: 100%
+			background-size: 100%
+			&-1
+				width: 160px
+				background: url('../img/firm-logo-page/Envato.png') no-repeat
+				background-size: 100%
+				
+			&-2
+				width: 185px
+				background: url('../img/firm-logo-page/WordPress.png') no-repeat
+				background-size: 100%
+			&-3
+				width: 130px
+				background: url('../img/firm-logo-page/Tuts+.png') no-repeat
+				background-size: 100%
+			&-4
+				width: 165px
+				background: url('../img/firm-logo-page/Microlancer_copy.png') no-repeat
+
+.team
+	background: #000
+	padding-bottom: 70px
+	&-title
+		margin-bottom: 60px
+	&-list
+		+flex-all(center, center, row wrap)
+		padding: 0
+		@media screen and (min-width: 740px)
+			+flex-justify(flex-start)
+		&-element
+			border: 1px solid
+			width: 100%
+			+flex-short(center, center)
+			flex-flow: column
+			@media screen and (min-width: 450px)
+				width: 45%
+			@media screen and (min-width: 740px)
+				width: 33%
+			@each $img-number in (1,2,3)
+				&-img-#{$img-number}
+					width: 150px
+					height: 150px
+					background: url('../img/team-page/Container.png') no-repeat
+					background-size: 100%
+					@media screen and (min-width: 450px)
+						width: 170px
+						height: 170px
+					@media screen and (min-width: 740px)
+						width: 220px
+						height: 220px
+			&-desc
+				+flex-flow(column nowrap)
+				text-align: center
+				&-name
+					margin-top: 20px
+					color: #fff;
+					font-family: "Brandon Grotesque Bold";
+					font-size: 18px;
+					font-weight: 700
+				&-prof
+					margin-top: 5px
+					margin-bottom: 5px
+					color: #ebebeb;
+					font-family: "Brandon Grotesque Regular";
+					font-size: 16px;
+					font-weight: 400;
+			&-button-list
+				+flex-short(center,center)
+				&-element
+					margin-right: 5px
+					height: 42px
+					width: 41px
+					background: url('../img/team-page/Twitter_Background.png') no-repeat
+					background-size: cover
+	&-desc
+		margin-top: 40px
+		+flex-short(center, center)
+		&-text
+			width: 70%
+			text-align: center
+			color: #ebebeb;
+			font-family: "Brandon Grotesque";
+			font-size: 18px;
+			font-weight: 400;
+
+footer
+	background-color: #7690c5
+.say-hello
+	+flex-flow(row wrap)
+	&-text
+		width: 100%
+		@media screen and (min-width: 740px)
+				width: 50%
+		&-title
+			text-align: left
+			color: #fff
+			font-size: 60px
+			font-family: "Brandon Grotesque Light"
+			font-weight: 300
+			&-allotment
+				color: #fff
+				font-family: "Brandon Grotesque Bold"
+				font-weight: 700
+			&-desc
+				color: #fff
+				font-family: "Brandon Grotesque"
+				font-size: 16px
+				font-weight: 400
+		&-list
+			+flex-flow(row wrap)
+			&-element
+				
+				+flex-flow(row wrap)
+				width: 100%
+				margin: 0
+				margin-top: 20px
+				@media screen and (min-width: 740px)
+						width: 50%
+				&-img
+					
+					width: 30px
+					+flex-short(center, flex-start)
+				&-container
+					width: 100%
+					+flex-short(flex-start, center)
+					@media screen and (min-width: 350px)
+						width: calc(100% - 20px - 72px)
+					&-text
+						color: #fff
+						font-family: "Brandon Grotesque"
+						font-size: 16px
+						font-weight: 400
+				&-image
+					
+					&-1
+						height: 30px		
+						width: 20px
+						background: url('../img/Mail-Icon.png') no-repeat
+						background-size: 100% 100%
+	&-form
+		width: 100%
+		@media screen and (min-width: 740px)
+				width: 50%
+		&-input
+			margin-top: 20px
+			padding: 15px
+			width: 90% //425
+			//border: 0.1px solid #BEBEBE
+		&-textarea
+			margin-top: 20px
+			padding: 15px
+			width: 90% //450
+			min-height: 200px
+			//border: 0.5px solid #BEBEBE
+.copyright
+	margin-top: 100px
+	padding: 30px
+	border-top: 0.1px solid #Fff
+	+flex-short(center, center)
+	span
+		color: #fff
+		font-family: "Brandon Grotesque"
+		font-size: 16px
+		font-weight: 400

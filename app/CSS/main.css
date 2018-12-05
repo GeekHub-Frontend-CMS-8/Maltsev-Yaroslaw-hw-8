@@ -1,0 +1,586 @@
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("../fonts/Brandon-Grotesque-Font/Brandon Grotesque/BrandonGrotesque-Thin.eot");
+  src: url("../fonts/Brandon-Grotesque-Font/Brandon Grotesque/BrandonGrotesque-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Brandon-Grotesque-Font/Brandon Grotesque/BrandonGrotesque-Thin.woff") format("woff"), url("../fonts/Brandon-Grotesque-Font/Brandon Grotesque/BrandonGrotesque-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  margin: 0;
+  font-family: "Brandon Grotesque"; }
+
+li {
+  list-style: none; }
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 25px; }
+
+a {
+  text-decoration: none; }
+
+button {
+  background: transparent;
+  border: solid #fff;
+  padding: 10px 40px; }
+
+.button-text {
+  color: #fff;
+  font-family: "Brandon Grotesque";
+  font-size: 23px; }
+
+.title {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #222222;
+  font-family: "Brandon Grotesque";
+  font-size: 45px;
+  font-family: "Brandon Grotesque Light";
+  font-weight: 300; }
+  .title-allotment {
+    font-family: "Brandon Grotesque Bold";
+    font-weight: 700; }
+    .title-allotment-white {
+      color: #fff;
+      font-family: "Brandon Grotesque Bold";
+      font-weight: 700; }
+  .title-desc {
+    text-align: center;
+    color: #777777;
+    font-family: "Brandon Grotesque";
+    font-size: 18px;
+    font-weight: 400; }
+  .title-white {
+    color: #fff;
+    font-family: "Brandon Grotesque Light";
+    font-weight: 300; }
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-bottom: 140px; }
+  .header-logo {
+    width: 20%;
+    display: flex;
+    align-items: center; }
+    .header-logo-name {
+      color: #fff;
+      font-size: 25px;
+      font-weight: 700;
+      text-transform: uppercase; }
+  .header-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%; }
+    .header-menu-row {
+      display: flex;
+      flex-flow: row wrap;
+      visibility: hidden;
+      position: absolute; }
+      @media screen and (min-width: 740px) {
+        .header-menu-row {
+          visibility: visible;
+          position: static; } }
+      .header-menu-row-element {
+        padding: 5px; }
+        .header-menu-row-element-name {
+          color: #fff;
+          font-family: "Brandon Grotesque";
+          font-size: 18px; }
+
+.main-page {
+  text-align: center;
+  background: url("../img/background/background-main.png") no-repeat;
+  background-size: cover; }
+  .main-page-section {
+    padding-bottom: 80px; }
+    .main-page-section-question {
+      color: #fff;
+      font-family: "Brandon Grotesque";
+      font-size: 20px;
+      font-weight: 300; }
+
+h1 {
+  margin-top: 30px;
+  margin-bottom: 55px;
+  color: #fff;
+  font-family: "Brandon Grotesque";
+  font-size: 56px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.menu-btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  position: relative;
+  visibility: visible; }
+  @media screen and (min-width: 740px) {
+    .menu-btn {
+      visibility: hidden;
+      position: absolute; } }
+  .menu-btn span {
+    position: absolute;
+    margin-top: -1px;
+    margin-left: -10px;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 2px;
+    background-color: #222;
+    visibility: visible; }
+    @media screen and (min-width: 740px) {
+      .menu-btn span {
+        visibility: hidden;
+        position: absolute; } }
+  .menu-btn span::before {
+    position: absolute;
+    margin-top: -1px;
+    margin-left: -10px;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 2px;
+    background-color: #222;
+    content: '';
+    display: block;
+    transition: 0.2s;
+    transform: translateY(-5px);
+    visibility: visible; }
+    @media screen and (min-width: 740px) {
+      .menu-btn span::before {
+        visibility: hidden;
+        position: absolute; } }
+  .menu-btn span::after {
+    position: absolute;
+    margin-top: -1px;
+    margin-left: -10px;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 2px;
+    background-color: #222;
+    content: '';
+    display: block;
+    transition: 0.2s;
+    transform: translateY(5px);
+    visibility: visible; }
+    @media screen and (min-width: 740px) {
+      .menu-btn span::after {
+        visibility: hidden;
+        position: absolute; } }
+
+.menu-btn:hover span:before {
+  transform: rotate(-35deg);
+  width: 10px;
+  transform-origin: left bottom; }
+
+.menu-btn:hover span:after {
+  transform: rotate(35deg);
+  width: 10px;
+  transform-origin: left top; }
+
+.adaptive-content {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap; }
+  .adaptive-content-container {
+    width: 100%; }
+    @media screen and (min-width: 740px) {
+      .adaptive-content-container {
+        width: 60%; } }
+
+.branding {
+  background-color: #fafafa; }
+  .branding-title {
+    text-align: left; }
+  @media screen and (min-width: 740px) {
+    .branding-container {
+      width: calc(60% - 70px);
+      margin-left: 70px; } }
+  .branding-img {
+    width: 275px;
+    height: 200px;
+    display: flex;
+    order: 2;
+    background-size: cover;
+    background: url("../img/main-page/Users-Icon.png") no-repeat; }
+    @media screen and (min-width: 740px) {
+      .branding-img {
+        order: 0; } }
+
+.web-development-title {
+  text-align: left; }
+
+@media screen and (min-width: 740px) {
+  .web-development-container {
+    width: calc(60% - 70px);
+    margin-right: 70px; } }
+
+.web-development-img {
+  width: 250px;
+  height: 220px;
+  background-size: cover;
+  background: url("../img/main-page/flow-tree-icon.png") no-repeat; }
+
+.skills-list {
+  display: flex;
+  flex-flow: row wrap; }
+  .skills-list-element {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-right: 0;
+    margin-top: 50px; }
+    @media screen and (min-width: 740px) {
+      .skills-list-element {
+        width: 45%;
+        margin-right: 5%; } }
+    .skills-list-element-img {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; }
+      @media screen and (min-width: 350px) {
+        .skills-list-element-img {
+          width: calc(100% - (100% - 20px - 72px)); } }
+    .skills-list-element-container {
+      width: 100%; }
+      @media screen and (min-width: 350px) {
+        .skills-list-element-container {
+          width: calc(100% - 20px - 72px); } }
+      .skills-list-element-container-title {
+        margin-bottom: 10px;
+        color: #222222;
+        font-family: "Brandon Grotesque";
+        font-size: 22px;
+        font-weight: 500; }
+    .skills-list-element-image-1 {
+      height: 72px;
+      width: 72px;
+      background: url("../img/skills-page/1.png") no-repeat;
+      background-size: 100% 100%; }
+    .skills-list-element-image-2 {
+      height: 72px;
+      width: 72px;
+      background: url("../img/skills-page/2.png") no-repeat;
+      background-size: 100% 100%; }
+    .skills-list-element-image-3 {
+      height: 72px;
+      width: 72px;
+      background: url("../img/skills-page/3.png") no-repeat;
+      background-size: 100% 100%; }
+    .skills-list-element-image-4 {
+      height: 72px;
+      width: 72px;
+      background: url("../img/skills-page/4.png") no-repeat;
+      background-size: 100% 100%; }
+    .skills-list-element-image-5 {
+      height: 72px;
+      width: 72px;
+      background: url("../img/skills-page/5.png") no-repeat;
+      background-size: 100% 100%; }
+    .skills-list-element-image-6 {
+      height: 72px;
+      width: 72px;
+      background: url("../img/skills-page/6.png") no-repeat;
+      background-size: 100% 100%; }
+
+.clients {
+  background-color: #fafafa; }
+  .clients-img {
+    width: 220px;
+    height: 220px;
+    background: url("../img/clients-page/Container.png") no-repeat;
+    background-size: cover; }
+    .clients-img-12 {
+      visibility: hidden;
+      position: absolute; }
+      @media screen and (min-width: 910px) {
+        .clients-img-12 {
+          position: static;
+          visibility: visible; } }
+    .clients-img-2 {
+      visibility: visible;
+      position: static; }
+      @media screen and (min-width: 910px) {
+        .clients-img-2 {
+          position: absolute;
+          visibility: hidden; } }
+  .clients-container {
+    padding: 55px 50px;
+    text-align: left; }
+    .clients-container-1 {
+      margin-left: 25px;
+      background: url("../img/clients-page/Speak_Box-top.png") no-repeat;
+      background-size: 100% 100%; }
+      @media screen and (min-width: 910px) {
+        .clients-container-1 {
+          background: url("../img/clients-page/Speak_Box-left.png") no-repeat;
+          background-size: 100% 100%; } }
+    .clients-container-2 {
+      margin-right: 25px;
+      background: url("../img/clients-page/Speak_Box-top.png") no-repeat;
+      background-size: 100% 100%; }
+      @media screen and (min-width: 910px) {
+        .clients-container-2 {
+          background: url("../img/clients-page/Speak_Box-right.png") no-repeat;
+          background-size: 100% 100%; } }
+
+blockquote {
+  margin-bottom: 15px;
+  color: #777777;
+  font-family: "Brandon Grotesque";
+  font-size: 20px;
+  font-weight: 400; }
+
+.quote-name {
+  color: #7690c5;
+  font-family: "Brandon Grotesque";
+  font-size: 18px;
+  font-weight: 400; }
+
+.logos-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap; }
+  .logos-list-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 10px 20px 0px; }
+    @media screen and (min-width: 500px) {
+      .logos-list-elements {
+        width: 45%;
+        margin: 20px 10px 20px 0px; } }
+    @media screen and (min-width: 890px) {
+      .logos-list-elements {
+        width: 20%;
+        margin-right: 5%; } }
+    .logos-list-elements-last {
+      margin-right: 0; }
+    .logos-list-elements-img {
+      height: 40px;
+      background-size: 100%; }
+      @media screen and (min-width: 890px) {
+        .logos-list-elements-img {
+          width: 100%; } }
+      .logos-list-elements-img-1 {
+        width: 160px;
+        background: url("../img/firm-logo-page/Envato.png") no-repeat;
+        background-size: 100%; }
+      .logos-list-elements-img-2 {
+        width: 185px;
+        background: url("../img/firm-logo-page/WordPress.png") no-repeat;
+        background-size: 100%; }
+      .logos-list-elements-img-3 {
+        width: 130px;
+        background: url("../img/firm-logo-page/Tuts+.png") no-repeat;
+        background-size: 100%; }
+      .logos-list-elements-img-4 {
+        width: 165px;
+        background: url("../img/firm-logo-page/Microlancer_copy.png") no-repeat; }
+
+.team {
+  background: #000;
+  padding-bottom: 70px; }
+  .team-title {
+    margin-bottom: 60px; }
+  .team-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 0; }
+    @media screen and (min-width: 740px) {
+      .team-list {
+        display: flex;
+        justify-content: flex-start; } }
+    .team-list-element {
+      border: 1px solid;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column; }
+      @media screen and (min-width: 450px) {
+        .team-list-element {
+          width: 45%; } }
+      @media screen and (min-width: 740px) {
+        .team-list-element {
+          width: 33%; } }
+      .team-list-element-img-1 {
+        width: 150px;
+        height: 150px;
+        background: url("../img/team-page/Container.png") no-repeat;
+        background-size: 100%; }
+        @media screen and (min-width: 450px) {
+          .team-list-element-img-1 {
+            width: 170px;
+            height: 170px; } }
+        @media screen and (min-width: 740px) {
+          .team-list-element-img-1 {
+            width: 220px;
+            height: 220px; } }
+      .team-list-element-img-2 {
+        width: 150px;
+        height: 150px;
+        background: url("../img/team-page/Container.png") no-repeat;
+        background-size: 100%; }
+        @media screen and (min-width: 450px) {
+          .team-list-element-img-2 {
+            width: 170px;
+            height: 170px; } }
+        @media screen and (min-width: 740px) {
+          .team-list-element-img-2 {
+            width: 220px;
+            height: 220px; } }
+      .team-list-element-img-3 {
+        width: 150px;
+        height: 150px;
+        background: url("../img/team-page/Container.png") no-repeat;
+        background-size: 100%; }
+        @media screen and (min-width: 450px) {
+          .team-list-element-img-3 {
+            width: 170px;
+            height: 170px; } }
+        @media screen and (min-width: 740px) {
+          .team-list-element-img-3 {
+            width: 220px;
+            height: 220px; } }
+      .team-list-element-desc {
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: center; }
+        .team-list-element-desc-name {
+          margin-top: 20px;
+          color: #fff;
+          font-family: "Brandon Grotesque Bold";
+          font-size: 18px;
+          font-weight: 700; }
+        .team-list-element-desc-prof {
+          margin-top: 5px;
+          margin-bottom: 5px;
+          color: #ebebeb;
+          font-family: "Brandon Grotesque Regular";
+          font-size: 16px;
+          font-weight: 400; }
+      .team-list-element-button-list {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .team-list-element-button-list-element {
+          margin-right: 5px;
+          height: 42px;
+          width: 41px;
+          background: url("../img/team-page/Twitter_Background.png") no-repeat;
+          background-size: cover; }
+  .team-desc {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .team-desc-text {
+      width: 70%;
+      text-align: center;
+      color: #ebebeb;
+      font-family: "Brandon Grotesque";
+      font-size: 18px;
+      font-weight: 400; }
+
+footer {
+  background-color: #7690c5; }
+
+.say-hello {
+  display: flex;
+  flex-flow: row wrap; }
+  .say-hello-text {
+    width: 100%; }
+    @media screen and (min-width: 740px) {
+      .say-hello-text {
+        width: 50%; } }
+    .say-hello-text-title {
+      text-align: left;
+      color: #fff;
+      font-size: 60px;
+      font-family: "Brandon Grotesque Light";
+      font-weight: 300; }
+      .say-hello-text-title-allotment {
+        color: #fff;
+        font-family: "Brandon Grotesque Bold";
+        font-weight: 700; }
+      .say-hello-text-title-desc {
+        color: #fff;
+        font-family: "Brandon Grotesque";
+        font-size: 16px;
+        font-weight: 400; }
+    .say-hello-text-list {
+      display: flex;
+      flex-flow: row wrap; }
+      .say-hello-text-list-element {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        margin: 0;
+        margin-top: 20px; }
+        @media screen and (min-width: 740px) {
+          .say-hello-text-list-element {
+            width: 50%; } }
+        .say-hello-text-list-element-img {
+          width: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start; }
+        .say-hello-text-list-element-container {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center; }
+          @media screen and (min-width: 350px) {
+            .say-hello-text-list-element-container {
+              width: calc(100% - 20px - 72px); } }
+          .say-hello-text-list-element-container-text {
+            color: #fff;
+            font-family: "Brandon Grotesque";
+            font-size: 16px;
+            font-weight: 400; }
+        .say-hello-text-list-element-image-1 {
+          height: 30px;
+          width: 20px;
+          background: url("../img/Mail-Icon.png") no-repeat;
+          background-size: 100% 100%; }
+  .say-hello-form {
+    width: 100%; }
+    @media screen and (min-width: 740px) {
+      .say-hello-form {
+        width: 50%; } }
+    .say-hello-form-input {
+      margin-top: 20px;
+      padding: 15px;
+      width: 90%; }
+    .say-hello-form-textarea {
+      margin-top: 20px;
+      padding: 15px;
+      width: 90%;
+      min-height: 200px; }
+
+.copyright {
+  margin-top: 100px;
+  padding: 30px;
+  border-top: 0.1px solid #Fff;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .copyright span {
+    color: #fff;
+    font-family: "Brandon Grotesque";
+    font-size: 16px;
+    font-weight: 400; }
