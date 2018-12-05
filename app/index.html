@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/reset.css">
-	<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="CSS/fonts.css">-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="CSS/fonts.css">
 	<link rel="stylesheet" type="text/css" href="CSS/main.css">
 	<title>Document</title>
 
@@ -21,31 +21,40 @@
 							<div class="header-logo-img">
 								<img src="img/7/logo.png" alt="" class="">
 							</div>
-							<div class="header-logo-name">
-								<span class="logo-name">
+							<div>
+								<span class="header-logo-name">
 									Forkio
 								</span>
 							</div>
 						</div>
-						<div class="header-menu">
-														
+						
+						<div class="header-menu">										
 							<ul class="header-menu-row">
 								<li class="header-menu-row-element">
-									<a href="#" class="header-menu-row-element-name">
+									<a href="#home" class="header-menu-row-element-name">
 										Home
 									</a>
 								</li>
 								<li class="header-menu-row-element">
-									<a href="#" class="header-menu-row-element-name">
-										Home
+									<a href="#services" class="header-menu-row-element-name">
+										Services
 									</a>
 								</li>
 								<li class="header-menu-row-element">
-									<a href="#" class="header-menu-row-element-name">
-										Home
+									<a href="#clients" class="header-menu-row-element-name">
+										Clients
 									</a>
 								</li>
-								
+								<li class="header-menu-row-element">
+									<a href="#team" class="header-menu-row-element-name">
+										Team
+									</a>
+								</li>
+								<li class="header-menu-row-element">
+									<a href="#contact" class="header-menu-row-element-name">
+										Contact
+									</a>
+								</li>								
 							</ul>
 							<div class="menu-btn" onclick="toggleMenu()">
 								<span>
@@ -55,7 +64,7 @@
 						</div>
 					</div>		
 				</header>
-				<div class="main-page-section">
+				<div class="main-page-section" id="home">
 					<h5 class="main-page-section-question">
 						Can you build the website of my dreams?
 					</h5>
@@ -73,7 +82,7 @@
 			</div>
 		</section>
 
-		<section class="services">
+		<section class="services" id="services">
 			<div class="web-development">
 				<div class="wrapper">
 					<div class="adaptive-content">						
@@ -243,7 +252,7 @@
 			</div>
 		</section>
 
-		<section class="clients">
+		<section class="clients" id="clients">
 			<div class="wrapper">
 				<h3 class="title">
 					Awesome
@@ -315,7 +324,7 @@
 			</div>
 		</section>
 
-		<section class="team">
+		<section class="team" id="team">
 			<div class="wrapper">
 				<h3 class="title team-title title-white">
 					Amazing
@@ -408,7 +417,7 @@
 			</div>
 		</section>
 	</main>
-	<footer>
+	<footer id="contact">
 		<div class="wrapper">
 			<div class="say-hello">
 				<div class="say-hello-text">

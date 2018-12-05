@@ -1,11 +1,55 @@
 
 *
 	margin: 0
-	font-family: "Brandon Grotesque"
+	+text-properties($mobile-font-size, $main-font, $main-color, $main-weight)
+	@media screen and (min-width: 350px)
+		font-size: $main-font-size
 li
 	list-style: none
 
 .wrapper
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 25px;
+	max-width: 900px
+	margin: 0 auto
+	padding: 25px
+a
+	text-decoration: none
+button
+	background: transparent
+	border: solid $light-color
+	padding: 10px 40px
+	&:hover
+		transition: 0.5s
+		background: $light-color
+	&:hover .button-text
+		transition: 0.5s
+		color: $secondary-color
+.button-text
+	color: $button-text-color
+	font-size: 23px
+
+.title
+	text-align: center
+	margin-bottom: 35px
+	color: #222222
+	font-size: $title-mobile-font-size
+	font-family: "Brandon Grotesque Light"
+	font-weight: 300
+	@media screen and (min-width: 350px)
+		font-size: $title-font-size
+	&-allotment
+		color: #000
+		font-family: "Brandon Grotesque Bold"
+		font-weight: 700
+		&-white
+			color: #fff
+			font-family: "Brandon Grotesque Bold"
+			font-weight: 700
+	&-desc
+		text-align: center
+		color: #777777
+		font-size: 18px
+		font-weight: 400
+	&-white
+		color: #fff
+		font-family: "Brandon Grotesque Light"
+		font-weight: 300

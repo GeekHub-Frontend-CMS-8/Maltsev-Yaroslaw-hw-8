@@ -1,13 +1,17 @@
-@font-face {
-  font-family: 'Brandon Grotesque';
-  src: url("../fonts/Brandon-Grotesque-Font/Brandon Grotesque/BrandonGrotesque-Thin.eot");
-  src: url("../fonts/Brandon-Grotesque-Font/Brandon Grotesque/BrandonGrotesque-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Brandon-Grotesque-Font/Brandon Grotesque/BrandonGrotesque-Thin.woff") format("woff"), url("../fonts/Brandon-Grotesque-Font/Brandon Grotesque/BrandonGrotesque-Thin.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+.logos-list-elements, .team-list-element, .team-list-element-button-list, .team-desc, .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 * {
   margin: 0;
-  font-family: "Brandon Grotesque"; }
+  font-size: 14px;
+  font-family: "Brandon Grotesque", sans-serif;
+  color: #777777;
+  font-weight: 400; }
+  @media screen and (min-width: 350px) {
+    * {
+      font-size: 16px; } }
 
 li {
   list-style: none; }
@@ -22,23 +26,31 @@ a {
 
 button {
   background: transparent;
-  border: solid #fff;
+  border: solid #ffffff;
   padding: 10px 40px; }
+  button:hover {
+    transition: 0.5s;
+    background: #ffffff; }
+  button:hover .button-text {
+    transition: 0.5s;
+    color: #000000; }
 
 .button-text {
-  color: #fff;
-  font-family: "Brandon Grotesque";
+  color: #ffffff;
   font-size: 23px; }
 
 .title {
   text-align: center;
   margin-bottom: 35px;
   color: #222222;
-  font-family: "Brandon Grotesque";
-  font-size: 45px;
+  font-size: 25px;
   font-family: "Brandon Grotesque Light";
   font-weight: 300; }
+  @media screen and (min-width: 350px) {
+    .title {
+      font-size: 45px; } }
   .title-allotment {
+    color: #000;
     font-family: "Brandon Grotesque Bold";
     font-weight: 700; }
     .title-allotment-white {
@@ -48,7 +60,6 @@ button {
   .title-desc {
     text-align: center;
     color: #777777;
-    font-family: "Brandon Grotesque";
     font-size: 18px;
     font-weight: 400; }
   .title-white {
@@ -66,10 +77,13 @@ button {
     display: flex;
     align-items: center; }
     .header-logo-name {
-      color: #fff;
-      font-size: 25px;
+      color: #ffffff;
+      font-size: 19px;
       font-weight: 700;
       text-transform: uppercase; }
+      @media screen and (min-width: 350px) {
+        .header-logo-name {
+          font-size: 25px; } }
   .header-menu {
     display: flex;
     justify-content: flex-end;
@@ -85,10 +99,16 @@ button {
           visibility: visible;
           position: static; } }
       .header-menu-row-element {
-        padding: 5px; }
+        padding: 10px 15px;
+        background: transparent; }
+        .header-menu-row-element:hover {
+          transition: 0.5s;
+          background: #ffffff; }
+        .header-menu-row-element:hover .header-menu-row-element-name {
+          transition: 0.5s;
+          color: #000000; }
         .header-menu-row-element-name {
-          color: #fff;
-          font-family: "Brandon Grotesque";
+          color: #ffffff;
           font-size: 18px; }
 
 .main-page {
@@ -98,25 +118,28 @@ button {
   .main-page-section {
     padding-bottom: 80px; }
     .main-page-section-question {
-      color: #fff;
-      font-family: "Brandon Grotesque";
-      font-size: 20px;
-      font-weight: 300; }
+      color: #ffffff;
+      font-size: 14px; }
+      @media screen and (min-width: 350px) {
+        .main-page-section-question {
+          font-size: 20px; } }
 
 h1 {
   margin-top: 30px;
   margin-bottom: 55px;
-  color: #fff;
-  font-family: "Brandon Grotesque";
-  font-size: 56px;
+  color: #ffffff;
+  font-size: 32px;
   font-weight: 700;
   text-transform: uppercase; }
+  @media screen and (min-width: 350px) {
+    h1 {
+      font-size: 56px; } }
 
 .menu-btn {
   display: block;
   width: 30px;
   height: 30px;
-  background-color: yellow;
+  background-color: transparent;
   position: relative;
   visibility: visible; }
   @media screen and (min-width: 740px) {
@@ -131,7 +154,7 @@ h1 {
     left: 50%;
     width: 20px;
     height: 2px;
-    background-color: #222;
+    background-color: #ffffff;
     visibility: visible; }
     @media screen and (min-width: 740px) {
       .menu-btn span {
@@ -145,7 +168,7 @@ h1 {
     left: 50%;
     width: 20px;
     height: 2px;
-    background-color: #222;
+    background-color: #ffffff;
     content: '';
     display: block;
     transition: 0.2s;
@@ -163,7 +186,7 @@ h1 {
     left: 50%;
     width: 20px;
     height: 2px;
-    background-color: #222;
+    background-color: #ffffff;
     content: '';
     display: block;
     transition: 0.2s;
@@ -243,6 +266,7 @@ h1 {
         width: 45%;
         margin-right: 5%; } }
     .skills-list-element-img {
+      margin-bottom: 25px;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -258,7 +282,6 @@ h1 {
       .skills-list-element-container-title {
         margin-bottom: 10px;
         color: #222222;
-        font-family: "Brandon Grotesque";
         font-size: 22px;
         font-weight: 500; }
     .skills-list-element-image-1 {
@@ -335,16 +358,17 @@ h1 {
 
 blockquote {
   margin-bottom: 15px;
-  color: #777777;
-  font-family: "Brandon Grotesque";
-  font-size: 20px;
-  font-weight: 400; }
+  font-size: 16px; }
+  @media screen and (min-width: 350px) {
+    blockquote {
+      font-size: 20px; } }
 
 .quote-name {
   color: #7690c5;
-  font-family: "Brandon Grotesque";
-  font-size: 18px;
-  font-weight: 400; }
+  font-size: 14px; }
+  @media screen and (min-width: 350px) {
+    .quote-name {
+      font-size: 18px; } }
 
 .logos-list {
   display: flex;
@@ -352,9 +376,6 @@ blockquote {
   align-items: center;
   flex-flow: row wrap; }
   .logos-list-elements {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     margin: 20px 10px 20px 0px; }
     @media screen and (min-width: 500px) {
@@ -390,7 +411,7 @@ blockquote {
         background: url("../img/firm-logo-page/Microlancer_copy.png") no-repeat; }
 
 .team {
-  background: #000;
+  background: #111;
   padding-bottom: 70px; }
   .team-title {
     margin-bottom: 60px; }
@@ -405,12 +426,10 @@ blockquote {
         display: flex;
         justify-content: flex-start; } }
     .team-list-element {
-      border: 1px solid;
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-flow: column; }
+      flex-flow: column;
+      margin-top: 30px;
+      text-align: center; }
       @media screen and (min-width: 450px) {
         .team-list-element {
           width: 45%; } }
@@ -462,7 +481,7 @@ blockquote {
         text-align: center; }
         .team-list-element-desc-name {
           margin-top: 20px;
-          color: #fff;
+          color: #ffffff;
           font-family: "Brandon Grotesque Bold";
           font-size: 18px;
           font-weight: 700; }
@@ -470,31 +489,23 @@ blockquote {
           margin-top: 5px;
           margin-bottom: 5px;
           color: #ebebeb;
-          font-family: "Brandon Grotesque Regular";
-          font-size: 16px;
-          font-weight: 400; }
-      .team-list-element-button-list {
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        .team-list-element-button-list-element {
-          margin-right: 5px;
-          height: 42px;
-          width: 41px;
-          background: url("../img/team-page/Twitter_Background.png") no-repeat;
-          background-size: cover; }
+          font-family: "Brandon Grotesque Regular"; }
+      .team-list-element-button-list-element {
+        margin-right: 5px;
+        height: 42px;
+        width: 41px;
+        background: url("../img/team-page/Twitter_Background.png") no-repeat;
+        background-size: cover; }
   .team-desc {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+    margin-top: 40px; }
     .team-desc-text {
       width: 70%;
       text-align: center;
       color: #ebebeb;
-      font-family: "Brandon Grotesque";
-      font-size: 18px;
-      font-weight: 400; }
+      font-size: 16px; }
+      @media screen and (min-width: 350px) {
+        .team-desc-text {
+          font-size: 18px; } }
 
 footer {
   background-color: #7690c5; }
@@ -509,19 +520,15 @@ footer {
         width: 50%; } }
     .say-hello-text-title {
       text-align: left;
-      color: #fff;
+      color: #ffffff;
       font-size: 60px;
-      font-family: "Brandon Grotesque Light";
-      font-weight: 300; }
+      font-family: "Brandon Grotesque Light"; }
       .say-hello-text-title-allotment {
-        color: #fff;
+        color: #ffffff;
         font-family: "Brandon Grotesque Bold";
         font-weight: 700; }
       .say-hello-text-title-desc {
-        color: #fff;
-        font-family: "Brandon Grotesque";
-        font-size: 16px;
-        font-weight: 400; }
+        color: #ffffff; }
     .say-hello-text-list {
       display: flex;
       flex-flow: row wrap; }
@@ -540,7 +547,7 @@ footer {
           justify-content: center;
           align-items: flex-start; }
         .say-hello-text-list-element-container {
-          width: 100%;
+          width: calc(100% - 30px);
           display: flex;
           justify-content: flex-start;
           align-items: center; }
@@ -548,10 +555,7 @@ footer {
             .say-hello-text-list-element-container {
               width: calc(100% - 20px - 72px); } }
           .say-hello-text-list-element-container-text {
-            color: #fff;
-            font-family: "Brandon Grotesque";
-            font-size: 16px;
-            font-weight: 400; }
+            color: #ffffff; }
         .say-hello-text-list-element-image-1 {
           height: 30px;
           width: 20px;
@@ -574,13 +578,7 @@ footer {
 
 .copyright {
   margin-top: 100px;
-  padding: 30px;
-  border-top: 0.1px solid #Fff;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  padding: 20px;
+  border-top: 0.1px solid #ffffff; }
   .copyright span {
-    color: #fff;
-    font-family: "Brandon Grotesque";
-    font-size: 16px;
-    font-weight: 400; }
+    color: #ffffff; }
