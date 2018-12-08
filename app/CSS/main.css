@@ -1,4 +1,4 @@
-.logos-list-elements, .team-list-element, .team-list-element-button-list, .team-desc, .copyright {
+.logos-list-elements, .team-list-element, .team-list-element-button-list, .team-list-element-button-list-element, .team-desc, .copyright {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -26,8 +26,12 @@ a {
 
 button {
   background: transparent;
-  border: solid #ffffff;
-  padding: 10px 40px; }
+  border: 1px solid #ffffff;
+  padding: 5px 20px; }
+  @media screen and (min-width: 550px) {
+    button {
+      border: 2px solid #ffffff;
+      padding: 10px 40px; } }
   button:hover {
     transition: 0.5s;
     background: #ffffff; }
@@ -37,35 +41,33 @@ button {
 
 .button-text {
   color: #ffffff;
-  font-size: 23px; }
+  font-size: 19px; }
+  @media screen and (min-width: 550px) {
+    .button-text {
+      font-size: 23px; } }
 
 .title {
   text-align: center;
   margin-bottom: 35px;
   color: #222222;
   font-size: 25px;
-  font-family: "Brandon Grotesque Light";
-  font-weight: 300; }
+  font-family: "Brandon Grotesque Light"; }
   @media screen and (min-width: 350px) {
     .title {
       font-size: 45px; } }
   .title-allotment {
     color: #000;
-    font-family: "Brandon Grotesque Bold";
     font-weight: 700; }
     .title-allotment-white {
       color: #fff;
-      font-family: "Brandon Grotesque Bold";
       font-weight: 700; }
   .title-desc {
     text-align: center;
     color: #777777;
-    font-size: 18px;
-    font-weight: 400; }
+    font-size: 18px; }
   .title-white {
     color: #fff;
-    font-family: "Brandon Grotesque Light";
-    font-weight: 300; }
+    font-family: "Brandon Grotesque Light"; }
 
 .header {
   display: flex;
@@ -120,7 +122,7 @@ button {
     .main-page-section-question {
       color: #ffffff;
       font-size: 14px; }
-      @media screen and (min-width: 350px) {
+      @media screen and (min-width: 550px) {
         .main-page-section-question {
           font-size: 20px; } }
 
@@ -128,12 +130,12 @@ h1 {
   margin-top: 30px;
   margin-bottom: 55px;
   color: #ffffff;
-  font-size: 32px;
+  font-size: 41px;
   font-weight: 700;
   text-transform: uppercase; }
-  @media screen and (min-width: 350px) {
+  @media screen and (min-width: 550px) {
     h1 {
-      font-size: 56px; } }
+      font-size: 60px; } }
 
 .menu-btn {
   display: block;
@@ -426,9 +428,10 @@ blockquote {
         display: flex;
         justify-content: flex-start; } }
     .team-list-element {
+      margin-top: 30px;
+      margin-bottom: 40px;
       width: 100%;
       flex-flow: column;
-      margin-top: 30px;
       text-align: center; }
       @media screen and (min-width: 450px) {
         .team-list-element {
@@ -490,12 +493,27 @@ blockquote {
           margin-bottom: 5px;
           color: #ebebeb;
           font-family: "Brandon Grotesque Regular"; }
-      .team-list-element-button-list-element {
-        margin-right: 5px;
-        height: 42px;
-        width: 41px;
-        background: url("../img/team-page/Twitter_Background.png") no-repeat;
-        background-size: cover; }
+      .team-list-element-button-list {
+        margin-top: 10px; }
+        .team-list-element-button-list-element {
+          margin-right: 5px;
+          padding: 15px;
+          border: solid #ffffff;
+          border-radius: 50%;
+          background-color: transparent; }
+          .team-list-element-button-list-element:hover {
+            transition: 0.5s;
+            background-color: #ffffff; }
+          .team-list-element-button-list-element:hover .team-list-element-button-list-element-link-img {
+            transition: 0.5s;
+            background: #000000; }
+          .team-list-element-button-list-element-link {
+            display: block;
+            width: 100%;
+            height: 100%; }
+            .team-list-element-button-list-element-link-img {
+              padding: 5px;
+              background: #ffffff; }
   .team-desc {
     margin-top: 40px; }
     .team-desc-text {

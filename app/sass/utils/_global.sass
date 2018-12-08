@@ -14,8 +14,11 @@ a
 	text-decoration: none
 button
 	background: transparent
-	border: solid $light-color
-	padding: 10px 40px
+	border: 1px solid $light-color
+	padding: 5px 20px
+	@media screen and (min-width: 550px)
+		border: 2px solid $light-color
+		padding: 10px 40px
 	&:hover
 		transition: 0.5s
 		background: $light-color
@@ -24,7 +27,9 @@ button
 		color: $secondary-color
 .button-text
 	color: $button-text-color
-	font-size: 23px
+	font-size: $mobile-font-size + 5px
+	@media screen and (min-width: 550px)
+		font-size: $main-font-size + 7px
 
 .title
 	text-align: center
@@ -32,23 +37,18 @@ button
 	color: #222222
 	font-size: $title-mobile-font-size
 	font-family: "Brandon Grotesque Light"
-	font-weight: 300
 	@media screen and (min-width: 350px)
 		font-size: $title-font-size
 	&-allotment
 		color: #000
-		font-family: "Brandon Grotesque Bold"
-		font-weight: 700
+		font-weight: $bold-weight
 		&-white
 			color: #fff
-			font-family: "Brandon Grotesque Bold"
-			font-weight: 700
+			font-weight: $bold-weight
 	&-desc
 		text-align: center
 		color: #777777
-		font-size: 18px
-		font-weight: 400
+		font-size: $main-font-size + 2px
 	&-white
 		color: #fff
 		font-family: "Brandon Grotesque Light"
-		font-weight: 300

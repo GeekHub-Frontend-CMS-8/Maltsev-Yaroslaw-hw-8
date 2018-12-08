@@ -9,10 +9,11 @@
 		@media screen and (min-width: 740px)
 			+flex-justify(flex-start)
 		&-element
+			margin-top: 30px
+			margin-bottom: 40px
 			width: 100%
 			@extend %flex-center
 			flex-flow: column
-			margin-top: 30px
 			text-align: center
 			@media screen and (min-width: 450px)
 				width: 45%
@@ -48,13 +49,28 @@
 					
 					
 			&-button-list
+				margin-top: 10px
 				@extend %flex-center
 				&-element
 					margin-right: 5px
-					height: 42px
-					width: 41px
-					background: url('../img/team-page/Twitter_Background.png') no-repeat
-					background-size: cover
+					padding: 20px - 5px
+					@extend %flex-center
+					border: solid $light-color
+					border-radius: 50%
+					background-color: transparent
+					&:hover
+						transition: 0.5s
+						background-color: $light-color
+					&:hover &-link-img
+						transition: 0.5s
+						background: $secondary-color
+					&-link
+						display: block
+						width: 100%
+						height: 100%
+						&-img
+							padding: 5px
+							background: $light-color
 	&-desc
 		margin-top: 40px
 		@extend %flex-center
